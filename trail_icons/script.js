@@ -1,20 +1,4 @@
-ScrollTrigger.matchMedia({
-  "(min-width: 769px)": function () {
-    const contactMeContainer = document.querySelector(".contact-me-container");
 
-    ScrollTrigger.create({
-      trigger: ".contact-me",
-      start: "top bottom",
-      end: "bottom bottom",
-      scrub: true,
-      onUpdate: (self) => {
-        const progress = self.progress;
-        const yValue = -60 * (1 - progress);
-        gsap.set(contactMeContainer, { y: `${yValue}%` });
-      },
-    });
-  },
-});
 
 const contactSection = document.querySelector("section.contact-me");
 
